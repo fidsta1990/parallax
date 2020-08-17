@@ -4,6 +4,18 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary: #7c624c;
+  --secondary: #c6b28d;
+  --grey-1: rgb(78, 78, 78);
+  --grey-2: rgb(146, 146, 146);
+  --white: #fff;
+  --transition: all 0.3s linear;
+  --shadow: 0 10px 15px rgb(161, 161, 161);
+  --shadow-2: 0 5px 10px rgb(161, 161, 161);
+  --spacing: 0.3rem;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -12,4 +24,251 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   height: 100%;
   width: 100%;
+  background: var(--white);
 }
+
+/* h1{}
+h2{}
+h3{}
+h4{}
+h5{}
+h6{} */
+
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3.5rem;
+  text-transform: capitalize;
+  padding: 1rem 0;
+  color: var(--primary);
+}
+h3 {
+  font-size: 2.8rem;
+}
+h4 {
+  font-size: 2rem;
+}
+h5 {
+  font-size: 1.5rem;
+}
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.3rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* global styles */
+.btn {
+  padding: 1.5rem 3rem;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  box-shadow: var(--shadow);
+  font-size: 2rem;
+  font-weight: bold;
+  transition: var(--transition);
+  background: transparent;
+}
+
+.btn:hover {
+  color: var(--white);
+  background: var(--secondary);
+}
+
+.section {
+  min-height: 50vh;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+}
+
+.section-text {
+  text-align: justify;
+  padding: 1rem;
+}
+
+.section-text h2 {
+  text-align: right;
+  padding: 1rem;
+}
+
+.section-text p {
+  line-height: 1.5;
+  padding: 1rem;
+}
+
+.underline {
+  width: 100%;
+  height: 0.5rem;
+  background: linear-gradient(
+    rgb(204, 175, 121),
+    rgb(230, 230, 230),
+    rgb(204, 177, 127)
+  );
+  box-shadow: var(--shadow-2);
+}
+
+@media (min-width: 768px) {
+  .section-text {
+    padding: 5rem;
+  }
+}
+/* end of global styles */
+
+/* header */
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background: url("./img/pexels-clem-onojeghuo-375895.jpg") no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  box-shadow: var(--shadow);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: rgb(231, 227, 227);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: var(--shadow);
+}
+
+.logo {
+  color: var(--primary);
+}
+
+.nav-links {
+  display: none;
+}
+
+.hero-btn {
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  transform: translate(-30%, -50%);
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: rgb(231, 227, 227);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: var(--shadow);
+  }
+
+  .logo,
+  .nav-link {
+    color: var(--primary);
+  }
+
+  .logo {
+    margin-left: 5rem;
+  }
+
+  .nav-links {
+    margin-right: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .nav-link {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-right: 1rem;
+    transition: var(--transition);
+  }
+
+  .nav-link:hover {
+    background: var(--secondary);
+    color: var(--white);
+  }
+
+  /* .hero-btn {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translate(-30%, -50%);
+  } */
+}
+
+/*  end of header */
+
+/* first section */
+.first {
+  background: url("./img/pexels-jaymantri-6492.jpg");
+  background-position: center;
+  background-size: cover;
+  box-shadow: var(--shadow);
+  background-attachment: fixed;
+}
+/* end of first section */
+
+/* second section */
+.second {
+  background: url("./img/pexels-terje-sollie-299348.jpg");
+  background-position: center;
+  background-size: cover;
+  box-shadow: var(--shadow);
+  background-attachment: fixed;
+}
+/* end of second section */
+
+/* third section */
+.third {
+  background: url("./img/pexels-tookapic-9708.jpg");
+  background-position: center;
+  background-size: cover;
+  box-shadow: var(--shadow);
+  background-attachment: fixed;
+}
+/* end of third section */
+
+/* footer section */
+.footer {
+  min-height: 20vh;
+  background: var(--secondary);
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--grey-1);
+  text-transform: capitalize;
+  font-size: 1.5rem;
+}
+
+.social {
+  list-style: none;
+  display: flex;
+  padding: 1rem;
+}
+
+.social li {
+  padding: 0 1rem;
+  cursor: pointer;
+}
+
+.date {
+  padding: 0 0.5rem;
+}
+/* end of footer section */
