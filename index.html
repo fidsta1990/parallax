@@ -7,11 +7,30 @@
     <title>Practice Parallax</title>
     <!-- icon -->
     <link rel="stylesheet icon" href="./img/archive-outline.svg">
+    <!-- ion icons framework  -->
+    <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
     <!-- stylesheet -->
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
+
+    <!-- sidebar -->
+
+    <div class="sidebar" id="sidebar">
+        <div class="close-btn" id="close-btn">
+            <span>&times;</span>
+        </div>
+        <div class="side-links">
+            <a href="#" class="side-link">home</a>
+            <a href="#" class="side-link">about</a>
+            <a href="#" class="side-link">gallery</a>
+            <a href="#" class="side-link">contact</a>
+        </div>
+    </div>
+    <!-- end of sidebar -->
+
+
     <!-- header -->
     <header class="header">
         <!-- navbar -->
@@ -19,6 +38,9 @@
         <nav class="navbar">
             <div class="logo">
                 <h1>Parallax</h1>
+                <button class="menu-toggle" id="menu-toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </button>
             </div>
             <div class="nav-links">
                 <a href="#" class="nav-link">home</a>
