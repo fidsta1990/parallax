@@ -96,7 +96,7 @@ a {
 }
 
 .section-text h2 {
-  text-align: right;
+  text-align: center;
   padding: 1rem;
 }
 
@@ -119,6 +119,11 @@ a {
 @media (min-width: 768px) {
   .section-text {
     padding: 5rem;
+  }
+
+  .section-text h2 {
+    text-align: right;
+    padding: 1rem;
   }
 }
 /* end of global styles */
@@ -345,6 +350,7 @@ a {
   color: var(--grey-1);
   text-transform: capitalize;
   font-size: 1.5rem;
+  text-align: center;
 }
 
 .social {
